@@ -32,12 +32,12 @@ public class EjemploEnvioMail {
             props.setProperty("mail.smtp.port", "587");
             props.setProperty("mail.smtp.user", "hulkike33@gmail.com");
             props.setProperty("mail.smtp.auth", "true");
-            props.setProperty("mail.password", "asdfasdf");
+            props.setProperty("mail.password", "kike089810");
             //props.put("mail.transport.protocol", "smtp");
             props.put("mail.debug", "true");
 
             String userName = "hulkike33@gmail.com";
-            String password = "";
+            String password = "kike089810";
 
             // Preparamos la sesion
             Session session = Session.getDefaultInstance(props);

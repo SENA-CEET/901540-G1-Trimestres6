@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="ImagenesEditDlg" widgetVar="ImagenesEditDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.EditImagenesTitle}">
+            <h:form id="ImagenesEditForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{imagenesController.selected != null}">
+                        <p:outputLabel value="#{bundle.EditImagenesLabel_idimagenes}" for="idimagenes" />
+                        <p:inputText id="idimagenes" value="#{imagenesController.selected.idimagenes}" title="#{bundle.EditImagenesTitle_idimagenes}" required="true" requiredMessage="#{bundle.EditImagenesRequiredMessage_idimagenes}"/>
+                        <p:outputLabel value="#{bundle.EditImagenesLabel_nombre}" for="nombre" />
+                        <p:inputText id="nombre" value="#{imagenesController.selected.nombre}" title="#{bundle.EditImagenesTitle_nombre}" />
+                        <p:outputLabel value="#{bundle.EditImagenesLabel_imagen}" for="imagen" />
+                        <p:inputTextarea rows="4" cols="30" id="imagen" value="#{imagenesController.selected.imagen}" title="#{bundle.EditImagenesTitle_imagen}" required="true" requiredMessage="#{bundle.EditImagenesRequiredMessage_imagen}"/>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{imagenesController.update}" value="#{bundle.Save}" update="display,:ImagenesListForm:datalist,:growl" oncomplete="handleSubmit(args, 'ImagenesEditDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="ImagenesEditDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

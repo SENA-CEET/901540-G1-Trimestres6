@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="ImagenesViewDlg" widgetVar="ImagenesViewDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.ViewImagenesTitle}">
+            <h:form id="ImagenesViewForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{imagenesController.selected != null}">
+                        <h:outputText value="#{bundle.ViewImagenesLabel_idimagenes}"/>
+                        <h:outputText value="#{imagenesController.selected.idimagenes}" title="#{bundle.ViewImagenesTitle_idimagenes}"/>
+                        <h:outputText value="#{bundle.ViewImagenesLabel_nombre}"/>
+                        <h:outputText value="#{imagenesController.selected.nombre}" title="#{bundle.ViewImagenesTitle_nombre}"/>
+                        <h:outputText value="#{bundle.ViewImagenesLabel_imagen}"/>
+                        <h:outputText value="#{imagenesController.selected.imagen}" title="#{bundle.ViewImagenesTitle_imagen}"/>
+                        
+                        <p:graphicImage  value="#{imagenesController.imageF}" width="50"  id="grpImage" height="80"/>
+                    </p:panelGrid>
+                    <p:commandButton value="#{bundle.Close}" onclick="ImagenesViewDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>
