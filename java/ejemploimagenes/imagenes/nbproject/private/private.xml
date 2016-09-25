@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/codigo/901540-G1-Trimestres6/java/ejemploimagenes/imagenes/src/java/edu/co/sena/ejemploimagenes/modelo/entities/Imagenes.java</file>
+            <file>file:/D:/codigo/901540-G1-Trimestres6/java/ejemploimagenes/imagenes/src/java/edu/co/sena/ejemploimagenes/vista/managerbeans/ImagenesController.java</file>
+            <file>file:/D:/codigo/901540-G1-Trimestres6/java/ejemploimagenes/imagenes/web/crud/imagenes/List.xhtml</file>
+            <file>file:/D:/codigo/901540-G1-Trimestres6/java/ejemploimagenes/imagenes/src/java/edu/co/sena/ejemploimagenes/controles/ejbs/AbstractFacade.java</file>
+            <file>file:/D:/codigo/901540-G1-Trimestres6/java/ejemploimagenes/imagenes/src/java/edu/co/sena/ejemploimagenes/controles/ejbs/ImagenesFacade.java</file>
+            <file>file:/D:/codigo/901540-G1-Trimestres6/java/ejemploimagenes/imagenes/src/java/edu/co/sena/ejemploimagenes/modelo/dtos/ImagenesDTO.java</file>
+        </group>
+    </open-files>
 </project-private>

@@ -61,4 +61,8 @@ public abstract class AbstractFacade<T> {
         return ((Long) q.getSingleResult()).intValue();
     }
     
+    public void limpiarEntities(){
+    getEntityManager().flush();
+    }
+    
 }
